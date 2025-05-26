@@ -12,6 +12,7 @@ public class Parqueadero {
     private ArrayList<Cliente> clientes;
     private ArrayList<Vehiculo> vehiculos;
     private ArrayList<Ingreso> ingresos;
+    private ArrayList<Puesto> puestos;
 
 
     private Parqueadero() {
@@ -19,6 +20,7 @@ public class Parqueadero {
         clientes = new ArrayList<>();
         vehiculos = new ArrayList<>();
         ingresos = new ArrayList<>();
+        puestos = new ArrayList<>();
 
     }
 
@@ -91,5 +93,13 @@ public class Parqueadero {
 
     public void setIngresos(ArrayList<Ingreso> ingresos) {
         this.ingresos = ingresos;
+    }
+
+    public ArrayList<Puesto> getPuestos() {
+        return puestos;
+    }
+
+    public void setPuestos(ArrayList<Puesto> puestos) {
+        this.puestos = puestos;
     }
 }
