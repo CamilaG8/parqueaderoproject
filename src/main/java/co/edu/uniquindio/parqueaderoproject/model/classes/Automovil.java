@@ -4,8 +4,8 @@ public class Automovil extends Vehiculo {
 
     private String marca;
 
-    public Automovil(String id, String placa, String color, String modelo, String marca, Membresia membresia) {
-        super(id, placa, color, modelo, membresia);
+    public Automovil(String id, String placa, String color, String modelo, String marca, Membresia membresia, String cedulaCliente) {
+        super(id, placa, color, modelo, membresia, cedulaCliente);
         this.marca = marca;
     }
 
