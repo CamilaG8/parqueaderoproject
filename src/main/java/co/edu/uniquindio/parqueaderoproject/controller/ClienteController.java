@@ -2,14 +2,20 @@ package co.edu.uniquindio.parqueaderoproject.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ClienteController {
+public class ClienteController implements Initializable {
+
 
     @FXML
     private ComboBox<?> cmbFiltroBusqueda;
@@ -56,9 +62,13 @@ public class ClienteController {
     @FXML
     private TextField txtTelefonoCliente;
 
-    @FXML
-    void agregarCliente(ActionEvent event) {
+    ParqueaderoController parqueaderoController;
 
+    @FXML
+    void agregarCliente(ActionEvent event) throws Exception {
+
+        FXMLLoader loader = parqueaderoController.abrirVentana("agregar-cliente-view.fxml","Agregar Cliente");
+        AgregarClienteController agregarClienteController = loader.getController();
     }
 
     @FXML
@@ -85,5 +95,12 @@ public class ClienteController {
     void seleccionarFiltro(ActionEvent event) {
 
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        parqueaderoController = new ParqueaderoController();
+    }
+
 
 }

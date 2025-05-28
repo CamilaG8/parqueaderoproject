@@ -8,7 +8,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="461.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.parqueaderoproject.controller.ClienteController">
    <children>
       <TableView fx:id="tblClientes" layoutX="48.0" layoutY="87.0" onMouseClicked="#seleccionarCliente" prefHeight="200.0" prefWidth="324.0">
@@ -31,7 +30,7 @@
       <TextField fx:id="txtTelefonoCliente" layoutX="48.0" layoutY="351.0" promptText="Telefono" />
       <TextField fx:id="txtCorreoCliente" layoutX="223.0" layoutY="351.0" promptText="Correo" />
       <Button layoutX="156.0" layoutY="398.0" mnemonicParsing="false" onAction="#guardarCambios" onMouseClicked="#guardarCambios" prefHeight="25.0" prefWidth="109.0" text="Guardar Cambios" />
-      <Button layoutX="478.0" layoutY="311.0" mnemonicParsing="false" onAction="#agregarCliente" onMouseClicked="#agregarCliente" prefHeight="25.0" prefWidth="109.0" text="Agregar Cliente" />
+      <Button layoutX="478.0" layoutY="311.0" mnemonicParsing="false" onAction="#agregarCliente" prefHeight="25.0" prefWidth="109.0" text="Agregar Cliente" />
       <Button layoutX="478.0" layoutY="351.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="25.0" prefWidth="109.0" text="Eliminar Cliente" />
       <TextField fx:id="txtBarraBusqueda" layoutX="95.0" layoutY="40.0" onKeyReleased="#filtrarTexto" prefHeight="25.0" prefWidth="138.0" />
       <Label layoutX="48.0" layoutY="44.0" text="Buscar" />
