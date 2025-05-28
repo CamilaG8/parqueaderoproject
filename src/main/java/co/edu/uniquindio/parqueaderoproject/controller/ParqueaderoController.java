@@ -23,6 +23,7 @@ public class ParqueaderoController implements Initializable {
 
         FXMLLoader loader =abrirVentana("ajustes-view.fxml","Ajustes");
         AjustesController controller = loader.getController();
+        controller.setParqueaderoController(this);
 
 
     }

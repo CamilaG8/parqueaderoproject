@@ -1,5 +1,6 @@
 package co.edu.uniquindio.parqueaderoproject;
 
+import co.edu.uniquindio.parqueaderoproject.controller.ParqueaderoController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,6 +16,7 @@ public class ParqueaderoApp extends Application {
         stage.setTitle("Parqueadero Ventana Principal");
         stage.setScene(scene);
         stage.show();
+        ParqueaderoController parkingController = fxmlLoader.getController();
     }
 
     public static void main(String[] args) {

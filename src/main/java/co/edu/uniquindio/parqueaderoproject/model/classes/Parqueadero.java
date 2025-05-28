@@ -9,10 +9,12 @@ public class Parqueadero {
     private String direccion;
     private String representante;
     private String telefono;
+    private int puestosMoto;
+    private int puestosCarro;
+    private int puestosCamion;
     private ArrayList<Cliente> clientes;
     private ArrayList<Vehiculo> vehiculos;
     private ArrayList<Ingreso> ingresos;
-    private ArrayList<Puesto> puestos;
     private ArrayList<Pago> pagos;
 
 
@@ -21,8 +23,14 @@ public class Parqueadero {
         clientes = new ArrayList<>();
         vehiculos = new ArrayList<>();
         ingresos = new ArrayList<>();
-        puestos = new ArrayList<>();
         pagos = new ArrayList<>();
+        nombre = "Parking";
+        direccion = "Parking";
+        representante = "Parking";
+        telefono = "Parking";
+        puestosMoto = 0;
+        puestosCarro = 0;
+        puestosCamion = 0;
 
     }
 
@@ -97,19 +105,35 @@ public class Parqueadero {
         this.ingresos = ingresos;
     }
 
-    public ArrayList<Puesto> getPuestos() {
-        return puestos;
-    }
-
-    public void setPuestos(ArrayList<Puesto> puestos) {
-        this.puestos = puestos;
-    }
-
     public ArrayList<Pago> getPagos() {
         return pagos;
     }
 
     public void setPagos(ArrayList<Pago> pagos) {
         this.pagos = pagos;
+    }
+
+    public int getPuestosMoto() {
+        return puestosMoto;
+    }
+
+    public void setPuestosMoto(int puestosMoto) {
+        this.puestosMoto = puestosMoto;
+    }
+
+    public int getPuestosCarro() {
+        return puestosCarro;
+    }
+
+    public void setPuestosCarro(int puestosCarro) {
+        this.puestosCarro = puestosCarro;
+    }
+
+    public int getPuestosCamion() {
+        return puestosCamion;
+    }
+
+    public void setPuestosCamion(int puestosCamion) {
+        this.puestosCamion = puestosCamion;
     }
 }
