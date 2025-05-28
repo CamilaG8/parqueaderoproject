@@ -4,6 +4,12 @@ import java.time.temporal.ChronoUnit;
 
 public class Pago {
 
+    private String cedulaCliente;
+    private String concepto;
+    private String placaVehiculo;
+    private double monto;
+
+
     public double calcularMonto(Ingreso ingreso, Tarifa tarifa, Vehiculo vehiculo) {
         if (vehiculo.getMembresia() != null && vehiculo.getMembresia().estaActiva()) {
         return 0.0;
