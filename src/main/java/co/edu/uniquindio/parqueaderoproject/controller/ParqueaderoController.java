@@ -58,6 +58,14 @@ public class ParqueaderoController implements Initializable {
 
     }
 
+    @FXML
+    void abrirVentanaAdministracion(MouseEvent event) throws Exception {
+
+        FXMLLoader loader =abrirVentana("administracion-view.fxml","Administracion");
+        AdministracionController controller = loader.getController();
+
+    }
+
 
     FXMLLoader abrirVentana(String ruta, String nombreVentana) throws Exception {
 

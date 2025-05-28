@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.parqueaderoproject.controller.ParqueaderoController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.parqueaderoproject.controller.ParqueaderoController">
    <children>
       <ImageView fitHeight="133.0" fitWidth="150.0" layoutX="79.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -25,14 +24,15 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <Button layoutX="106.0" layoutY="159.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaClientes" prefHeight="34.0" prefWidth="76.0" text="Clientes" />
+      <Button layoutX="96.0" layoutY="159.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaClientes" prefHeight="34.0" prefWidth="99.0" text="Clientes" />
       <ImageView fitHeight="22.0" fitWidth="26.0" layoutX="249.0" layoutY="14.0" onMouseClicked="#abrirAjustes" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/settings.png" />
          </image>
       </ImageView>
-      <Button layoutX="106.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaVehiculos" prefHeight="34.0" prefWidth="76.0" text="Vehiculos" />
-      <Button layoutX="106.0" layoutY="251.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaIngresos" prefHeight="34.0" prefWidth="76.0" text="Ingresos" />
-      <Button layoutX="107.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaReportes" prefHeight="34.0" prefWidth="76.0" text="Reportes" />
+      <Button layoutX="96.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaVehiculos" prefHeight="34.0" prefWidth="99.0" text="Vehiculos" />
+      <Button layoutX="96.0" layoutY="251.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaIngresos" prefHeight="34.0" prefWidth="99.0" text="Ingreso y pago" />
+      <Button layoutX="97.0" layoutY="344.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaReportes" prefHeight="34.0" prefWidth="99.0" text="Reportes" />
+      <Button layoutX="97.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaAdministracion" prefHeight="34.0" prefWidth="99.0" text="Administracion" />
    </children>
 </Pane>
