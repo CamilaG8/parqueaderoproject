@@ -20,4 +20,43 @@ public class Pago {
         }
         return tarifa.getValorHora(vehiculo) * horas;
     }
+
+    public Pago(String cedulaCliente, String concepto, String placaVehiculo, double monto) {
+        this.cedulaCliente = cedulaCliente;
+        this.concepto = concepto;
+        this.placaVehiculo = placaVehiculo;
+        this.monto = monto;
+    }
+
+    public String getCedulaCliente() {
+        return cedulaCliente;
+    }
+
+    public void setCedulaCliente(String cedulaCliente) {
+        this.cedulaCliente = cedulaCliente;
+    }
+
+    public String getConcepto() {
+        return concepto;
+    }
+
+    public void setConcepto(String concepto) {
+        this.concepto = concepto;
+    }
+
+    public String getPlacaVehiculo() {
+        return placaVehiculo;
+    }
+
+    public void setPlacaVehiculo(String placaVehiculo) {
+        this.placaVehiculo = placaVehiculo;
+    }
+
+    public double getMonto() {
+        return monto;
+    }
+
+    public void setMonto(double monto) {
+        this.monto = monto;
+    }
 }

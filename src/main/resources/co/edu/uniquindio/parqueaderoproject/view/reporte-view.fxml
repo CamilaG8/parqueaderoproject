@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="co.edu.uniquindio.parqueaderoproject.controller.ReporteController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="285.0" prefWidth="317.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.parqueaderoproject.controller.ReporteController">
+   <children>
+      <TableView fx:id="tblPagos" layoutX="12.0" layoutY="37.0" prefHeight="200.0" prefWidth="292.0">
+        <columns>
+          <TableColumn fx:id="colCedula" prefWidth="75.0" text="Cedula" />
+          <TableColumn fx:id="colPlaca" prefWidth="98.0" text="Placa" />
+            <TableColumn fx:id="colMontoPago" prefWidth="117.0" text="Pago" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>

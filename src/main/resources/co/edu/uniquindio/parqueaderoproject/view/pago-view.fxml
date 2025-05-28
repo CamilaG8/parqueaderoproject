@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="222.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.parqueaderoproject.controller.PagoController">
+   <children>
+      <TextField fx:id="txtCedula" layoutX="35.0" layoutY="37.0" promptText="Cedula" />
+      <TextField fx:id="txtPlaca" layoutX="35.0" layoutY="95.0" promptText="Placa" />
+      <ComboBox fx:id="cmbConceptoPago" layoutX="31.0" layoutY="154.0" onAction="#seleccionarConceptoPago" prefWidth="150.0" promptText="Concepto a pagar" />
+      <Button layoutX="56.0" layoutY="217.0" mnemonicParsing="false" onAction="#generarFacturaPago" text="Generar Factura" />
+   </children>
+</Pane>
