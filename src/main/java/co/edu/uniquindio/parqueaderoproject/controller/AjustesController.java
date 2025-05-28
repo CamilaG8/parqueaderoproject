@@ -1,6 +1,7 @@
 package co.edu.uniquindio.parqueaderoproject.controller;
 
 import co.edu.uniquindio.parqueaderoproject.model.classes.Parqueadero;
+import co.edu.uniquindio.parqueaderoproject.service.Alerta;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -30,6 +31,8 @@ public class AjustesController {
         parking.setRepresentante(representanteParkingText.getText());
         parking.setTelefono(telefonoParkingTxt.getText());
         parqueaderoController.updateData();
+        Alerta.getInstance().alertaInfo("Datos actualizados","Datos del parqueadero actualizados con exito");
+
 
     }
 
