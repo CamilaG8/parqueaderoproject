@@ -1,5 +1,7 @@
 package co.edu.uniquindio.parqueaderoproject.service;
 
+import java.util.Random;
+
 public class IdGenerator {
 
     public static IdGenerator instance;
@@ -16,7 +18,18 @@ public class IdGenerator {
 
     public String generateId() {
 
-        return ""; //CODIGO GENERADOR DE ID
+
+            String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            StringBuilder id = new StringBuilder();
+            Random random = new Random();
+
+            for (int i = 0; i < 6; i++) {
+                int indice = random.nextInt(caracteres.length());
+                id.append(caracteres.charAt(indice));
+            }
+
+            return id.toString();
+
 
     }
 
