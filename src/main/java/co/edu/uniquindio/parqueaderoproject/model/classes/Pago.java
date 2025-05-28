@@ -18,6 +18,6 @@ public class Pago {
         if (horas == 0) {
             horas = 1;
         }
-        return tarifa.getValorHora() * horas;
+        return tarifa.getValorHora(vehiculo) * horas;
     }
 }

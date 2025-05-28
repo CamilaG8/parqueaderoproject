@@ -1,6 +1,8 @@
 package co.edu.uniquindio.parqueaderoproject.model.classes;
 
 public class Tarifa {
+
+    public static Tarifa instance;
     private double valorHoraMoto;
     private double valorHoraCarro;
     private double valorHoraCamion;
@@ -8,38 +10,31 @@ public class Tarifa {
     private double valorTrimestre;
     private double valorAnual;
 
-    public Tarifa( double valorHoraMoto, double valorHoraCarro, double valorHoraCamion, double valorMes, double valorTrimestre, double valorAnual) {
+    private Tarifa( ) {
 
-        this.valorHoraMoto = valorHoraMoto;
-        this.valorHoraCarro = valorHoraCarro;
-        this.valorHoraCamion = valorHoraCamion;
-        this.valorMes = valorMes;
-        this.valorTrimestre = valorTrimestre;
-        this.valorAnual = valorAnual;
+        this.valorHoraMoto = 0.0;
+        this.valorHoraCarro = 0.0;
+        this.valorHoraCamion = 0.0;
+        this.valorMes = 0.0;
+        this.valorTrimestre = 0.0;
+        this.valorAnual = 0.0;
     }
 
-    public double getValorHoraMoto() {
-        return valorHoraMoto;
+    public static Tarifa getInstance() {
+        if ( instance == null ) {
+            instance = new Tarifa( );
+        }
+        return instance;
     }
 
-    public void setValorHoraMoto(double valorHoraMoto) {
-        this.valorHoraMoto = valorHoraMoto;
-    }
-
-    public double getValorHoraCarro() {
-        return valorHoraCarro;
-    }
-
-    public void setValorHoraCarro(double valorHoraCarro) {
-        this.valorHoraCarro = valorHoraCarro;
-    }
-
-    public double getValorHoraCamion() {
-        return valorHoraCamion;
-    }
-
-    public void setValorHoraCamion(double valorHoraCamion) {
-        this.valorHoraCamion = valorHoraCamion;
+    public double getValorHora(Vehiculo vehiculo) {
+        if(vehiculo instanceof Moto){
+            return valorHoraMoto;
+        } else if (vehiculo instanceof Automovil) {
+            return valorHoraCarro;
+        }else{
+            return valorHoraCamion;
+        }
     }
 
     public double getValorMes() {
