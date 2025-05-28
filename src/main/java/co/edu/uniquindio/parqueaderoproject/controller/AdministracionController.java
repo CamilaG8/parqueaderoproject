@@ -2,9 +2,13 @@ package co.edu.uniquindio.parqueaderoproject.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 
-public class AdministracionController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AdministracionController implements Initializable {
 
     @FXML
     private TextField txtPuestoCamion;
@@ -48,4 +52,8 @@ public class AdministracionController {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
