@@ -1,34 +1,45 @@
 package co.edu.uniquindio.parqueaderoproject.model.classes;
 
 public class Tarifa {
-    private String tipoVehiculo;
-    private double valorHora;
+    private double valorHoraMoto;
+    private double valorHoraCarro;
+    private double valorHoraCamion;
     private double valorMes;
     private double valorTrimestre;
     private double valorAnual;
 
-    public Tarifa(String tipoVehiculo, double valorHora, double valorMes, double valorTrimestre, double valorAnual) {
-        this.tipoVehiculo = tipoVehiculo;
-        this.valorHora = valorHora;
+    public Tarifa( double valorHoraMoto, double valorHoraCarro, double valorHoraCamion, double valorMes, double valorTrimestre, double valorAnual) {
+
+        this.valorHoraMoto = valorHoraMoto;
+        this.valorHoraCarro = valorHoraCarro;
+        this.valorHoraCamion = valorHoraCamion;
         this.valorMes = valorMes;
         this.valorTrimestre = valorTrimestre;
         this.valorAnual = valorAnual;
     }
 
-    public String getTipoVehiculo() {
-        return tipoVehiculo;
+    public double getValorHoraMoto() {
+        return valorHoraMoto;
     }
 
-    public void setTipoVehiculo(String tipoVehiculo) {
-        this.tipoVehiculo = tipoVehiculo;
+    public void setValorHoraMoto(double valorHoraMoto) {
+        this.valorHoraMoto = valorHoraMoto;
     }
 
-    public double getValorHora() {
-        return valorHora;
+    public double getValorHoraCarro() {
+        return valorHoraCarro;
     }
 
-    public void setValorHora(double valorHora) {
-        this.valorHora = valorHora;
+    public void setValorHoraCarro(double valorHoraCarro) {
+        this.valorHoraCarro = valorHoraCarro;
+    }
+
+    public double getValorHoraCamion() {
+        return valorHoraCamion;
+    }
+
+    public void setValorHoraCamion(double valorHoraCamion) {
+        this.valorHoraCamion = valorHoraCamion;
     }
 
     public double getValorMes() {
@@ -55,11 +66,7 @@ public class Tarifa {
         this.valorAnual = valorAnual;
     }
 
-    @Override
-    public String toString() {
-        return "Tarifa para " + tipoVehiculo + ": " +
-                "Hora: $" + valorHora + ", Mes: $" + valorMes +
-                ", Trimestre: $" + valorTrimestre + ", Año: $" + valorAnual;
-    }
+
+
 }
 
