@@ -7,11 +7,14 @@ public class Vehiculo {
         private String color;
         private String modelo;
         private Membresia membresia;
+        private String cedulaCliente;
 
-    public Vehiculo(String id, String placa, String color, String modelo, Membresia membresia) {
+    public Vehiculo(String id, String placa, String color, String modelo, Membresia membresia, String cedulaCliente) {
         this.placa = placa;
         this.color = color;
         this.modelo = modelo;
+        this.membresia = membresia;
+        this.cedulaCliente = cedulaCliente;
     }
 
     public String getPlaca() {
@@ -52,5 +55,13 @@ public class Vehiculo {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getCedula() {
+        return cedulaCliente;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedulaCliente = cedula;
     }
 }
