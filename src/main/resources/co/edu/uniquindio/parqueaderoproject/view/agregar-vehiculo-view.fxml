@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="co.edu.uniquindio.parqueaderoproject.controller.AgregarVehiculoController"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="251.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.parqueaderoproject.controller.AgregarVehiculoController">
+   <children>
+      <TextField fx:id="txtPlaca" layoutX="49.0" layoutY="43.0" promptText="Placa" />
+      <TextField fx:id="txtColor" layoutX="49.0" layoutY="97.0" promptText="Color" />
+      <TextField fx:id="txtModelo" layoutX="49.0" layoutY="151.0" promptText="Modelo" />
+      <ComboBox fx:id="cmbTipoMembresia" layoutX="48.0" layoutY="206.0" onAction="#seleccionarMembresia" prefWidth="150.0" promptText="Tipo Membresia" />
+      <ComboBox fx:id="cmbTipoVehiculo" layoutX="48.0" layoutY="261.0" onAction="#seleccionarTipoVehiculo" prefWidth="150.0" promptText="Tipo Vehiculo" />
+      <Button layoutX="79.0" layoutY="373.0" mnemonicParsing="false" onAction="#guardarVehiculo" prefHeight="34.0" prefWidth="93.0" text="Guardar" />
+      <TextField fx:id="txtDatoAdicional" layoutX="49.0" layoutY="315.0" visible="false" />
+   </children>
+</Pane>
