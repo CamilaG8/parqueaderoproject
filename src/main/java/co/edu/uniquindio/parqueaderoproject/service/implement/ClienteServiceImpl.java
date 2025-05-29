@@ -8,6 +8,8 @@ import java.util.List;
 public class ClienteServiceImpl implements ClienteService {
     @Override
     public String registrarCliente(Cliente cliente) {
+
+
         return "";
     }
 

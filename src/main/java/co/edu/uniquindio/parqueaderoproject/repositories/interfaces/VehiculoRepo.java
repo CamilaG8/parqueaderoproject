@@ -7,9 +7,7 @@ import java.util.List;
 public interface VehiculoRepo {
 
     public Vehiculo findVehiculo(String placa);
-    public List<Vehiculo> getAllVehiculos();
     public void insertVehiculo(Vehiculo vehiculo);
-    public void updateVehiculo(Vehiculo vehiculo);
     public void deleteVehiculo(Vehiculo vehiculo);
     public List<Vehiculo> findAllVehiculos();
 
