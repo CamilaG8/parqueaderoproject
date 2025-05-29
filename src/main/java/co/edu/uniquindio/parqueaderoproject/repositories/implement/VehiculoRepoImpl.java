@@ -36,7 +36,12 @@ public class VehiculoRepoImpl implements VehiculoRepo {
     public void deleteVehiculo(Vehiculo vehiculo) {
 
         ArrayList<Vehiculo> vehiculos = parqueadero.getVehiculos();
-        vehiculos.remove(vehiculo);
+        for(Vehiculo vehiculo2: vehiculos){
+            if(vehiculo2.getPlaca().equals(vehiculo.getPlaca())){
+                vehiculos.remove(vehiculo2);
+                break;
+            }
+        }
         parqueadero.setVehiculos(vehiculos);
 
     }

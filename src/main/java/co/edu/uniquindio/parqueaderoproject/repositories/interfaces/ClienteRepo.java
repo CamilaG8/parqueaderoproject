@@ -11,5 +11,6 @@ public interface ClienteRepo {
     public void deleteCliente(String cedula);
     public List<Cliente> findAllClientes();
     public List<Cliente> findClienteByNombre(String nombre);
-    public List<Cliente> findClienteByCedula(String apellido);
+    public List<Cliente> findClientesByCedula(String cedula);
+    public Cliente findClienteByCedula(String cedula);
 }

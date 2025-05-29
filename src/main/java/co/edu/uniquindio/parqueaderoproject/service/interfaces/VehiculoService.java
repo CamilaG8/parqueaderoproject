@@ -1,6 +1,7 @@
 package co.edu.uniquindio.parqueaderoproject.service.interfaces;
 
 import co.edu.uniquindio.parqueaderoproject.model.classes.Ingreso;
+import co.edu.uniquindio.parqueaderoproject.model.classes.Pago;
 import co.edu.uniquindio.parqueaderoproject.model.classes.Vehiculo;
 
 import java.util.List;
@@ -13,7 +14,8 @@ public interface VehiculoService {
     public String agregarVehiculo(Vehiculo vehiculo);
     public String eliminarVehiculo(String placa);
     public String actualizarVehiculo(Vehiculo vehiculo);
-    public String pagarMembresia(String placa);
+    public String pagarMembresia(Pago pago);
     public String pagarSalida(Ingreso ingreso);
+    public String agregarIngreso(Ingreso ingreso);
 
 }

@@ -22,6 +22,7 @@ public class Pago {
     }
 
     public Pago(String cedulaCliente, String concepto, String placaVehiculo, double monto) {
+
         this.cedulaCliente = cedulaCliente;
         this.concepto = concepto;
         this.placaVehiculo = placaVehiculo;
