@@ -11,7 +11,8 @@ public class Cliente {
     private String correo;
     private ArrayList<Vehiculo> vehiculos;
 
-    public Cliente(String nombre, String cedula, String telefono, String correo) {
+    public Cliente(String id, String nombre, String cedula, String telefono, String correo) {
+        this.id = id;
         this.nombre = nombre;
         this.cedula = cedula;
         this.telefono = telefono;
