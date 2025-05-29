@@ -8,4 +8,5 @@ module co.edu.uniquindio.parqueaderoproject {
     exports co.edu.uniquindio.parqueaderoproject;
     exports co.edu.uniquindio.parqueaderoproject.controller;
     opens co.edu.uniquindio.parqueaderoproject.controller to javafx.fxml;
+    opens co.edu.uniquindio.parqueaderoproject.model.classes;
 }

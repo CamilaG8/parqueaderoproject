@@ -1,10 +1,12 @@
 package co.edu.uniquindio.parqueaderoproject.service.implement;
 
 import co.edu.uniquindio.parqueaderoproject.model.classes.Cliente;
+import co.edu.uniquindio.parqueaderoproject.model.classes.Vehiculo;
 import co.edu.uniquindio.parqueaderoproject.repositories.implement.ClienteRepoImpl;
 import co.edu.uniquindio.parqueaderoproject.repositories.interfaces.ClienteRepo;
 import co.edu.uniquindio.parqueaderoproject.service.interfaces.ClienteService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteServiceImpl implements ClienteService {
@@ -38,8 +40,11 @@ public class ClienteServiceImpl implements ClienteService {
     public String actualizarCliente(Cliente cliente) {
 
         Cliente clienteViejo = clienteRepo.findClienteByCedula(cliente.getCedula());
+        ArrayList<Vehiculo> vehiculos = clienteViejo.getVehiculos();
         clienteRepo.deleteCliente(clienteViejo.getCedula());
+        cliente.setVehiculos(vehiculos);
         clienteRepo.saveCliente(cliente);
+
 
         return "Cliente actualizado con éxito";
     }

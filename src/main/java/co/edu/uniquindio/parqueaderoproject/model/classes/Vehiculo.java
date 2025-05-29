@@ -8,6 +8,7 @@ public class Vehiculo {
         private String modelo;
         private Membresia membresia;
         private String cedulaCliente;
+        private String membre;
 
     public Vehiculo(String id, String placa, String color, String modelo, Membresia membresia, String cedulaCliente) {
         this.placa = placa;
@@ -15,6 +16,15 @@ public class Vehiculo {
         this.modelo = modelo;
         this.membresia = membresia;
         this.cedulaCliente = cedulaCliente;
+    }
+
+    public String getMembre(){
+
+        if(this.membresia.estaActiva()){
+            return "activa";
+        }else{
+            return "vencida";
+        }
     }
 
     public String getPlaca() {

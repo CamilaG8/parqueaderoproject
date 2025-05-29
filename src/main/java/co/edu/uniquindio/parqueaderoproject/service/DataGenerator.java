@@ -19,14 +19,18 @@ public class DataGenerator {
         ArrayList<Pago> pagos = new ArrayList<>();
         ArrayList<Ingreso> ingresos = new ArrayList<>();
 
+        ArrayList<Vehiculo> vehiculos1 = new ArrayList<>();
+        ArrayList<Vehiculo> vehiculos2 = new ArrayList<>();
+        ArrayList<Vehiculo> vehiculos3 = new ArrayList<>();
+
         //Cliente 1 Moto
-        Cliente cliente1 = new Cliente(idGenerator.generateId(),"Jorge Nitales",
+        Cliente cliente1 = new Cliente(idGenerator.generateId(),"Cristian Aristizabal",
                 "10948896325","3125558749","jorgito@gmail.com");
         //Cliente 2 Carro
-        Cliente cliente2 = new Cliente(idGenerator.generateId(),"Robert Galarga",
+        Cliente cliente2 = new Cliente(idGenerator.generateId(),"Laura Gonzalez",
                 "10947523654","3004578965","roberto@gmail.com");
         //Cliente 3 Camion
-        Cliente cliente3 = new Cliente(idGenerator.generateId(), "Elvio Lao","1094178952",
+        Cliente cliente3 = new Cliente(idGenerator.generateId(), "Katy Correa","1094178952",
                 "3178524698","elvio@gmail.com");
 
         //Vehiculo 1 asociado con Cliente 1
@@ -38,6 +42,8 @@ public class DataGenerator {
         //Vehiculo 3 asociado con Cliente 3
         Vehiculo vehiculo3 = new Camion(idGenerator.generateId(), "DTY771","rojo","2018",
                 3,new Membresia("anual",1000000),"1094178952");
+
+
 
         //Pago 1 membresia mensual cliente 1
         Pago pago1 = new Pago("10948896325","Membresía mensual","ERT22H",
@@ -57,6 +63,11 @@ public class DataGenerator {
                 "TRR777","camion");
         ingreso3.setSalida(LocalDateTime.now());
 
+        vehiculos1.add(vehiculo1);
+        vehiculos2.add(vehiculo2);
+        vehiculos3.add(vehiculo3);
+
+
         clientes.add(cliente1);
         clientes.add(cliente2);
         clientes.add(cliente3);
@@ -72,6 +83,10 @@ public class DataGenerator {
         ingresos.add(ingreso1);
         ingresos.add(ingreso2);
         ingresos.add(ingreso3);
+
+        cliente1.setVehiculos(vehiculos1);
+        cliente2.setVehiculos(vehiculos2);
+        cliente3.setVehiculos(vehiculos3);
 
         parqueadero.setClientes(clientes);
         parqueadero.setVehiculos(vehiculos);
