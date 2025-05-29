@@ -1,5 +1,7 @@
 package co.edu.uniquindio.parqueaderoproject.controller;
 
+import co.edu.uniquindio.parqueaderoproject.service.implement.ClienteServiceImpl;
+import co.edu.uniquindio.parqueaderoproject.service.interfaces.ClienteService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -63,6 +65,8 @@ public class ClienteController implements Initializable {
     private TextField txtTelefonoCliente;
 
     ParqueaderoController parqueaderoController;
+    ClienteService clienteService;
+
 
     @FXML
     void agregarCliente(ActionEvent event) throws Exception {
@@ -100,6 +104,13 @@ public class ClienteController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         parqueaderoController = new ParqueaderoController();
+        clienteService = new ClienteServiceImpl();
+    }
+
+    void updateTable(){
+
+
+
     }
 
 
