@@ -1,5 +1,7 @@
 package co.edu.uniquindio.parqueaderoproject.controller;
 
+import co.edu.uniquindio.parqueaderoproject.model.classes.Parqueadero;
+import co.edu.uniquindio.parqueaderoproject.model.classes.Tarifa;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -51,8 +53,19 @@ public class FacturaController implements Initializable {
     @FXML
     private Label lblTotalPagar;
 
+    IngresoController ingresoController;
+
+    Parqueadero parqueadero = Parqueadero.getInstancia();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        this.lblDireccionParking.setText(parqueadero.getDireccion());
+        this.lblTelefonoParking.setText(parqueadero.getTelefono());
+        this.lblRepresentanteParking.setText(parqueadero.getRepresentante());
+    }
+
+    public void setController(IngresoController ingresoController) {
+        this.ingresoController = ingresoController;
 
     }
 }

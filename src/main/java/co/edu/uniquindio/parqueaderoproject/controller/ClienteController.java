@@ -91,6 +91,7 @@ public class ClienteController implements Initializable {
 
         FXMLLoader loader = parqueaderoController.abrirVentana("agregar-cliente-view.fxml","Agregar Cliente");
         AgregarClienteController agregarClienteController = loader.getController();
+        agregarClienteController.setClienteController(this);
     }
 
     @FXML

@@ -9,6 +9,7 @@ import co.edu.uniquindio.parqueaderoproject.repositories.implement.VehiculoRepoI
 import co.edu.uniquindio.parqueaderoproject.repositories.interfaces.IngresoRepo;
 import co.edu.uniquindio.parqueaderoproject.repositories.interfaces.PagoRepo;
 import co.edu.uniquindio.parqueaderoproject.repositories.interfaces.VehiculoRepo;
+import co.edu.uniquindio.parqueaderoproject.service.interfaces.ClienteService;
 import co.edu.uniquindio.parqueaderoproject.service.interfaces.VehiculoService;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class VehiculoServiceImpl implements VehiculoService {
     VehiculoRepo vehiculoRepo = new VehiculoRepoImpl();
     PagoRepo pagoRepo = new PagoRepoImpl();
     IngresoRepo ingresoRepo = new IngresoRepoImpl();
+    ClienteService clienteService = new ClienteServiceImpl();
 
     @Override
     public List<Vehiculo> listarVehiculos() {
@@ -60,6 +62,7 @@ public class VehiculoServiceImpl implements VehiculoService {
     public String agregarVehiculo(Vehiculo vehiculo) {
 
         vehiculoRepo.insertVehiculo(vehiculo);
+
 
         return "Vehiculo agregado con éxito";
     }

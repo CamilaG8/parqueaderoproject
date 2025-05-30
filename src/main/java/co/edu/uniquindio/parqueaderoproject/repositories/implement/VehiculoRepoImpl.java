@@ -1,7 +1,9 @@
 package co.edu.uniquindio.parqueaderoproject.repositories.implement;
 
+import co.edu.uniquindio.parqueaderoproject.model.classes.Cliente;
 import co.edu.uniquindio.parqueaderoproject.model.classes.Parqueadero;
 import co.edu.uniquindio.parqueaderoproject.model.classes.Vehiculo;
+import co.edu.uniquindio.parqueaderoproject.repositories.interfaces.ClienteRepo;
 import co.edu.uniquindio.parqueaderoproject.repositories.interfaces.VehiculoRepo;
 
 import java.util.ArrayList;
@@ -10,6 +12,8 @@ import java.util.List;
 public class VehiculoRepoImpl implements VehiculoRepo {
 
     Parqueadero parqueadero = Parqueadero.getInstancia();
+    ClienteRepo clienteRepo = new ClienteRepoImpl();
+    Cliente cliente;
 
     @Override
     public Vehiculo findVehiculo(String placa) {
@@ -28,7 +32,11 @@ public class VehiculoRepoImpl implements VehiculoRepo {
 
         ArrayList<Vehiculo> vehiculos = parqueadero.getVehiculos();
         vehiculos.add(vehiculo);
+        cliente = clienteRepo.findClienteByCedula(vehiculo.getCedula());
+        cliente.setVehiculo(vehiculo);
+
         parqueadero.setVehiculos(vehiculos);
+
 
     }
 
@@ -43,6 +51,13 @@ public class VehiculoRepoImpl implements VehiculoRepo {
             }
         }
         parqueadero.setVehiculos(vehiculos);
+        cliente = clienteRepo.findClienteByCedula(vehiculo.getCedula());
+        for(Vehiculo vehiculo3: cliente.getVehiculos()){
+            if(vehiculo3.getPlaca().equals(vehiculo.getPlaca())){
+                vehiculos.remove(vehiculo3);
+                break;
+            }
+        }
 
     }
 

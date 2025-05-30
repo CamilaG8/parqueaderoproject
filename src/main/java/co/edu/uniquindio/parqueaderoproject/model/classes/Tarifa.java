@@ -61,7 +61,28 @@ public class Tarifa {
         this.valorAnual = valorAnual;
     }
 
+    public double getValorHoraMoto() {
+        return valorHoraMoto;
+    }
 
+    public void setValorHoraMoto(double valorHoraMoto) {
+        this.valorHoraMoto = valorHoraMoto;
+    }
 
+    public double getValorHoraCarro() {
+        return valorHoraCarro;
+    }
+
+    public void setValorHoraCarro(double valorHoraCarro) {
+        this.valorHoraCarro = valorHoraCarro;
+    }
+
+    public double getValorHoraCamion() {
+        return valorHoraCamion;
+    }
+
+    public void setValorHoraCamion(double valorHoraCamion) {
+        this.valorHoraCamion = valorHoraCamion;
+    }
 }
 
